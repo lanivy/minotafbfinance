@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minot AFB Finance FAQ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .search-box {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .faq {
+      background: #fff;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-left: 5px solid #003366;
+      border-radius: 4px;
+    }
+    .faq h3 {
+      margin-top: 0;
+    }
+    .faq-icon {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Minot AFB Finance - Frequently Asked Questions</h1>
+  </header>
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by keyword (e.g. BAH, travel voucher)...">
+    </div>
+
+    <div class="faq-list">
+      <div class="faq">
+        <h3><span class="faq-icon">💰</span>What is BAH and how is it calculated?</h3>
+        <p>BAH (Basic Allowance for Housing) is determined based on your duty station zip code, rank, and dependency status. You can look up current rates on [https://www.defensetravel.dod.mil](https://www.defensetravel.dod.mil).</p>
+      </div>
+
+      <div class="faq">
+        <h3><span class="faq-icon">📄</span>How do I submit a travel voucher?</h3>
+        <p>You can file your voucher via DTS or myFSS depending on your travel type. Be sure to include receipts, orders, and any lodging forms.</p>
+      </div>
+
+      <div class="faq">
+        <h3><span class="faq-icon">📅</span>When is military pay day?</h3>
+        <p>Paydays are typically on the 1st and 15th of each month. If it falls on a weekend or holiday, you will be paid the previous business day.</p>
+      </div>
+
+      <div class="faq">
+        <h3><span class="faq-icon">🏦</span>How do I change my direct deposit information?</h3>
+        <p>Login to myPay (https://mypay.dfas.mil), select “Direct Deposit,” and follow the instructions to update your bank account.</p>
+      </div>
+
+      <div class="faq">
+        <h3><span class="faq-icon">🧾</span>Where can I get a LES copy?</h3>
+        <p>LES (Leave and Earnings Statement) is available via myPay. Navigate to "Leave and Earnings Statements" under your account.</p>
+      </div>
+
+      <!-- Add more Q&A entries here -->
+
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const faqs = document.querySelectorAll(".faq");
+
+    searchInput.addEventListener("input", function () {
+      const keyword = this.value.toLowerCase();
+      faqs.forEach(faq => {
+        const text = faq.innerText.toLowerCase();
+        faq.style.display = text.includes(keyword) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
